@@ -1,0 +1,35 @@
+Bubble Sort
+
+This is one of the sorting techniques (but most infamous). It is an exchange sort, where 
+it involves repeated comparisions of adjacent elements. In this sort, each element is like
+bubbles in the water tank, each seeks its own level.
+
+//Bubble Sort Source Listing 1
+	for (i = size - 1; i >= 0; i--)
+		for (j = 1; j <= i; j++) {
+			if (a[j] < a[j - 1]) {
+				temp = a[j];
+				a[j] = a[j - 1];
+				a[j - 1] = temp;
+			}
+		}
+
+The outer loop causes the array to be scanned n -1 times. This loop ensures each element 
+to go to the correct place when the function terminates. Inner loop is the one which performs
+the actual exchanges and comparisons.
+
+//Bubble Sort Source Listing 2
+	for (i = 1; i < size; i++)
+		for (j = size - 1; j >= i; j--) {
+			if (a[j] < a[j - 1]) {
+				temp = a[j];
+				a[j] = a[j - 1];
+				a[j - 1] = temp;
+			}
+		}
+
+The peformance of a sorting is judged by the no of exchanges, comparisons the technique makes
+in the best, average and worst cases.
+
+
+
